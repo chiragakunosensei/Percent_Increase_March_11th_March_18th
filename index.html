@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+        
+        
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Increase'],
+          
+     
+
+            
+            
+            ['Turkey', 9700],
+          ['Armenia', 8300],
+          ['Jordan', 5100],
+          ['Andorra', 3800],
+          ['Luxembourg', 2800],
+          ['Faroe Islands', 2800],
+             ['Liechtenstein', 2700],
+             ['Sri Lanka', 2450],
+             ['Estonia', 1513],
+             ['Pakistan', 1474],
+             ['Ukraine', 1300],
+             ['Peru', 1218],
+             ['Bulgaria', 1200],
+             ['Jamaica', 1200],
+             ['Cambodia', 1067],
+             ['Mexico', 1062],
+             ['Panama', 975],
+             ['Slovakia', 950],
+             ['Chile', 935],
+             ['Colombia', 933],
+             ['Burkina Faso', 900],
+             ['Moldova', 880],
+             ['Morocco', 880],
+             ['Brazil', 879],
+             ['Lithuania', 800],
+             ['South Africa', 793],
+             ['Cyprus', 717],
+             ['Saudia Arabia', 714],
+             ['Poland', 707],
+             ['Portugal', 659],
+             ['Senegal', 675],
+             ['Russia', 635],
+             ['Latvia', 610],
+             ['Monaco', 600],
+             ['Serbia', 592],
+             ['Ireland', 579],
+             ['Austria', 569],
+             ['Indonesia', 568],
+             ['Ecuador', 553],
+             ['Germany', 546],
+             ['Malta', 533],
+             ['Martinique', 533],
+             ['Brunei', 518],
+             ['Spain', 511],
+             ['Mongolia', 500],
+             ['Bolivia', 500],
+       
+            
+          
+            
+        ]);
+
+                var options = {
+
+    colorAxis: {colors: ['#ff4c4c', '#ff0000', '#660000']},
+    backgroundColor: '#DCDCDC',
+    datalessRegionColor: '#C0C0C0',
+    defaultColor: '#f5f5f5',
+                    legend:'left',
+  'title':'My Big Pie Chart',
+  'is3D':true,
+  'width':400,
+  'height':300
+};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
